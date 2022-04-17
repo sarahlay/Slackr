@@ -1,0 +1,308 @@
+/* COMP6080 Assignment 2
+By z5161194
+CSS file for Slackr */
+
+/* base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h4 {
+    size: 10px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* classes */
+
+.banner {
+    text-align: center;
+}
+
+.registration-login {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.registration-login input {
+    padding: 15px;
+    margin: 5px auto;
+    width: 400px;
+    height: 20px;
+    max-width: 80%;
+}
+
+.registration-login button {
+    margin: 5px auto;
+    width: 400px;
+    max-width: 80%;;
+}
+
+.dropdown {
+    margin-bottom: 50px;
+    position: fixed;
+}
+
+.member-channel, .channel-button {
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.member-channel:hover {
+    cursor: pointer;
+    background-color: #3CACAE;
+}
+
+.channel-active {
+    background-color: #3CACAE;
+}
+
+.message {
+    position: relative;
+    margin: 10px;
+}
+
+.message-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-profile-image {
+    position: absolute;
+    right: 0;
+    margin-left: 20px;
+}
+
+.message-graphic {
+    color: white;
+}
+
+.message-buttons {
+    display: none;
+    position: relative;
+    margin-left: auto;
+}
+
+.edited-message-info {
+    display: none;
+    font-style: italic;
+    color: #97a4af;
+    margin-top: 5px;
+}
+
+.edit-message-cancel, .edit-message {
+    display: none;
+}
+
+.pin {
+    color: white;
+}
+
+.pin:hover, .pin-active {
+    color: orange;
+}
+
+.message-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* id elements */
+
+#main-placeholder {
+    margin: auto;
+    font-style: italic;
+    color: darkgray;
+}
+
+
+#homepage-container {
+    display: none;
+    flex-direction: row;
+}
+
+#sidebar {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    width: 200px;
+    overflow: auto;
+    position: sticky;
+}
+
+#sidebar-header {
+    text-align: center;
+}
+
+#main-content {
+    display: none;
+    flex-direction: column;
+    flex: 3;
+    padding-top: 20px;
+    padding-left: 1px;
+}
+
+#new-channel-form {
+    display: none;
+    margin: 0 auto;
+    width: 50vh;
+}
+
+#new-channel-form div {
+    padding: 5px;
+}
+
+#new-channel-buttons {
+    display: flex;
+    flex-direction: row;
+}
+#new-channel-create {
+    margin-left: auto;
+}
+
+#channel-banner {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    color: white;
+    height: 90px;
+    font-size: 10px;
+    line-height: 2px;
+}
+
+#channel-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 165px;
+    text-overflow: wr;
+}
+
+#channel-header {
+    display: flex;
+    flex-direction: row;
+}
+
+#channel-type {
+    text-align: center;
+    margin: auto;
+}
+
+#channel-buttons {
+    margin: 10px;
+    margin-left: auto;
+    height: 40px;
+}
+
+#edit-channel {
+    display: none;
+    flex-direction: column;
+}
+
+#edit-channel input {
+    margin: 5px 0;
+}
+
+#edit-channel-cancel, #navbar, #page-register {
+    display: none;
+}
+
+#leave-channel-button {
+    margin-top: auto;
+}
+
+#messages-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+}
+
+#channel-messages {
+    height: auto;
+    max-height: 70vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#message-input {
+    width: auto;
+}
+
+#message-box {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 80%;
+    bottom: 10px;
+}
+
+/* Templates */
+
+#template-channel-button {
+    display: none;
+    width: fit-content;
+}
+
+#template-join-button, #template-member-badge, #template-message {
+    display: none;
+}
+
+#send-message-button {
+    border: 1px solid white;
+}
+
+#paginate {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    display: none;
+}
+
+#pinned-message-container button:hover, #pinned-message-container a:hover {
+    cursor: text;
+}
+
+@media only screen and (max-width: 585px) {
+    #sidebar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #edit-channel-button, #leave-channel-button, #invite {
+        display: none;
+    }
+}
